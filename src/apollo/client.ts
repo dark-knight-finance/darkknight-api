@@ -8,5 +8,6 @@ export default new ApolloClient({
     fetch,
     uri: 'https://thegraph.com/hosted-service/subgraph/shahzeb8285/dark-knight-two'
   }),
+  
   cache: new InMemoryCache()
 })

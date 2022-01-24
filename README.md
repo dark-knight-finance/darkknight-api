@@ -5,7 +5,7 @@ and volume information. All information is fetched from the underlying subgraphs
 
 The API is designed around the [CoinMarketCap document](https://docs.google.com/document/d/1S4urpzUnO2t7DmS_1dc4EL4tgnnbTObPYXvDeBnukCg) and [CoinGecko document](https://docs.google.com/document/d/1v27QFoQq1SKT3Priq3aqPgB70Xd_PnDzbOCiuoCyixw/edit#).
 
-KnightSwap DEX subgraph playground: https://graphapi.KnightSwap.financial/subgraphs/name/KnightSwap/KnightSwap-subgraph-bsc
+KnightSwap DEX subgraph playground: https://graphapi.dark.knightswap.financial/subgraphs/name/KnightSwap/KnightSwap-subgraph-bsc
 
 # KnightSwap Endpoints
 
@@ -14,14 +14,14 @@ only by WBNB in the pairs.
 
 The canonical WBNB address used by the KnightSwap interface is `0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c`.
 
-## [`/summary`](https://api.KnightSwap.financial/api/v2/summary)
+## [`/summary`](https://api.dark.knightswap.financial/api/v2/summary)
 
 Returns data for the top ~1000 KnightSwap pairs, sorted by reserves.
 Results are edge cached for 15 minutes.
 
 ### Request
 
-`GET https://api.KnightSwap.financial/api/v2/summary`
+`GET https://api.dark.knightswap.financial/api/v2/summary`
 
 ### Response
 
@@ -38,14 +38,14 @@ Results are edge cached for 15 minutes.
 }
 ```
 
-## [`/totalliquidity`](https://api.KnightSwap.financial/api/v2/totalliquidity)
+## [`/totalliquidity`](https://api.dark.knightswap.financial/api/v2/totalliquidity)
 
 Returns the total liquidity in USD value on KnightSwap.
 Results are edge cached for 24 hours.
 
 ### Request
 
-`GET https://api.KnightSwap.financial/api/v2/totalliquidity`
+`GET https://api.dark.knightswap.financial/api/v2/totalliquidity`
 
 ### Response
 
@@ -57,14 +57,14 @@ Results are edge cached for 24 hours.
 }
 ```
 
-## [`/stats`](https://api.KnightSwap.financial/api/v2/totalliquidity)
+## [`/stats`](https://api.dark.knightswap.financial/api/v2/totalliquidity)
 
 Returns the statistics value on KnightSwap.
 Results are edge cached for 24 hours.
 
 ### Request
 
-`GET https://api.KnightSwap.financial/api/v2/stats`
+`GET https://api.dark.knightswap.financial/api/v2/stats`
 
 ### Response
 
@@ -82,14 +82,14 @@ Results are edge cached for 24 hours.
 }
 ```
 
-## [`/assets`](https://api.KnightSwap.financial/api/v2/assets)
+## [`/assets`](https://api.dark.knightswap.financial/api/v2/assets)
 
 Returns the tokens in the top ~1000 pairs on KnightSwap, sorted by reserves.
 Results are edge cached for 24 hours.
 
 ### Request
 
-`GET https://api.KnightSwap.financial/api/v2/assets`
+`GET https://api.dark.knightswap.financial/api/v2/assets`
 
 ### Response
 
@@ -114,7 +114,7 @@ Returns the single token asset
 
 ### Request
 
-`GET https://api.KnightSwap.financial/api/v2/assets/:token_address`
+`GET https://api.dark.knightswap.financial/api/v2/assets/:token_address`
 
 ### Response
 
@@ -134,14 +134,14 @@ Returns the single token asset
   // ...
 }
 ```
-## [`/tickers`](https://api.KnightSwap.financial/api/v2/tickers)
+## [`/tickers`](https://api.dark.knightswap.financial/api/v2/tickers)
 
 Returns data for the top ~1000 KnightSwap pairs, sorted by reserves.
 Results are edge cached for 1 minute.
 
 ### Request
 
-`GET https://api.KnightSwap.financial/api/v2/tickers`
+`GET https://api.dark.knightswap.financial/api/v2/tickers`
 
 ### Response
 
@@ -172,7 +172,7 @@ Results are edge cached for 15 minutes.
 
 ### Request
 
-`GET https://api.KnightSwap.financial/api/v2/orderbook/:pair`
+`GET https://api.dark.knightswap.financial/api/v2/orderbook/:pair`
 
 ### URL Parameters
 
@@ -213,7 +213,7 @@ trade types (types `"???"` and `"borrow-both"`).
 
 ### Request
 
-`GET https://api.KnightSwap.financial/api/v2/trades/:pair`
+`GET https://api.dark.knightswap.financial/api/v2/trades/:pair`
 
 ### Response
 

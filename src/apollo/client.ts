@@ -6,8 +6,7 @@ import fetch from 'node-fetch'
 export default new ApolloClient({
   link: new HttpLink({
     fetch,
-    uri: 'https://thegraph.com/hosted-service/subgraph/shahzeb8285/dark-knight-two'
+    uri: 'https://api.thegraph.com/subgraphs/name/shahzeb8285/dark-knight-two'
   }),
-  
   cache: new InMemoryCache()
 })

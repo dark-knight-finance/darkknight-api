@@ -24,7 +24,7 @@ export default async function (req: NowRequest, res: NowResponse): Promise<void>
         name: token?.name,
         symbol: token?.symbol,
         price_usd: token?.derivedETH * ethPrice,
-        price_bnb: token?.derivedETH,
+        price_ftm: token?.derivedETH,
       },
     }, 60 * 60 * 24);
   } catch (error) {

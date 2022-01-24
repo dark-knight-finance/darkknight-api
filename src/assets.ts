@@ -24,7 +24,7 @@ export default async function(req: NowRequest, res: NowResponse): Promise<void> 
         if (memo[id]) continue
         if (parseFloat(token?.derivedETH) > 0) {
           memo[id] = {
-            price_bnb: token?.derivedETH,
+            price_ftm: token?.derivedETH,
             price_usd: ethPrice * token?.derivedETH,
             id,
             name: token.name,

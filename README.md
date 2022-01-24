@@ -102,7 +102,7 @@ Results are edge cached for 24 hours.
     id: '0x...', // the address of the BEP20 token
     maker_fee: '0', // always 0
     taker_fee: '0.002', // always 0.002 i.e. .2%
-    price_bnb:"...",
+    price_ftm:"...",
     price_usd:"...",
   }
   // ...
@@ -129,7 +129,7 @@ Returns the single token asset
     maker_fee: '0', // always 0
     taker_fee: '0.002' // always 0.002 i.e. .2%
     price_usd:"...",
-    price_bnb:"...",
+    price_ftm:"...",
   }
   // ...
 }

@@ -1,22 +1,22 @@
-# KnightSwap API
+# DarkKnight API
 
-The KnightSwap API is a set of endpoints used by market aggregators (e.g. coinmarketcap.com) to surface KnightSwap liquidity
+The DarkKnight API is a set of endpoints used by market aggregators (e.g. coinmarketcap.com) to surface DarkKnight liquidity
 and volume information. All information is fetched from the underlying subgraphs.
 
 The API is designed around the [CoinMarketCap document](https://docs.google.com/document/d/1S4urpzUnO2t7DmS_1dc4EL4tgnnbTObPYXvDeBnukCg) and [CoinGecko document](https://docs.google.com/document/d/1v27QFoQq1SKT3Priq3aqPgB70Xd_PnDzbOCiuoCyixw/edit#).
 
-KnightSwap DEX subgraph playground: https://graphapi.dark.knightswap.financial/subgraphs/name/KnightSwap/KnightSwap-subgraph-bsc
+DarkKnight DEX subgraph playground: https://graphapi.dark.knightswap.financial/subgraphs/name/DarkKnight/DarkKnight-subgraph-bsc
 
-# KnightSwap Endpoints
+# DarkKnight Endpoints
 
-All KnightSwap pairs consist of two different tokens. BNB is not a native currency in KnightSwap, and is represented
+All DarkKnight pairs consist of two different tokens. BNB is not a native currency in DarkKnight, and is represented
 only by WBNB in the pairs.
 
-The canonical WBNB address used by the KnightSwap interface is `0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c`.
+The canonical WBNB address used by the DarkKnight interface is `0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c`.
 
 ## [`/summary`](https://api.dark.knightswap.financial/api/v2/summary)
 
-Returns data for the top ~1000 KnightSwap pairs, sorted by reserves.
+Returns data for the top ~1000 DarkKnight pairs, sorted by reserves.
 Results are edge cached for 15 minutes.
 
 ### Request
@@ -40,7 +40,7 @@ Results are edge cached for 15 minutes.
 
 ## [`/totalliquidity`](https://api.dark.knightswap.financial/api/v2/totalliquidity)
 
-Returns the total liquidity in USD value on KnightSwap.
+Returns the total liquidity in USD value on DarkKnight.
 Results are edge cached for 24 hours.
 
 ### Request
@@ -59,7 +59,7 @@ Results are edge cached for 24 hours.
 
 ## [`/stats`](https://api.dark.knightswap.financial/api/v2/totalliquidity)
 
-Returns the statistics value on KnightSwap.
+Returns the statistics value on DarkKnight.
 Results are edge cached for 24 hours.
 
 ### Request
@@ -84,7 +84,7 @@ Results are edge cached for 24 hours.
 
 ## [`/assets`](https://api.dark.knightswap.financial/api/v2/assets)
 
-Returns the tokens in the top ~1000 pairs on KnightSwap, sorted by reserves.
+Returns the tokens in the top ~1000 pairs on DarkKnight, sorted by reserves.
 Results are edge cached for 24 hours.
 
 ### Request
@@ -136,7 +136,7 @@ Returns the single token asset
 ```
 ## [`/tickers`](https://api.dark.knightswap.financial/api/v2/tickers)
 
-Returns data for the top ~1000 KnightSwap pairs, sorted by reserves.
+Returns data for the top ~1000 DarkKnight pairs, sorted by reserves.
 Results are edge cached for 1 minute.
 
 ### Request
@@ -165,9 +165,9 @@ Results are edge cached for 1 minute.
 
 ## `/orderbook/:pair`
 
-Returns simulated orderbook data for the given KnightSwap pair.
-Since KnightSwap has a continuous orderbook, fixed amounts in an interval are chosen for bids and asks,
-and prices are derived from the KnightSwap formula (accounting for both slippage and fees paid to LPs).
+Returns simulated orderbook data for the given DarkKnight pair.
+Since DarkKnight has a continuous orderbook, fixed amounts in an interval are chosen for bids and asks,
+and prices are derived from the DarkKnight formula (accounting for both slippage and fees paid to LPs).
 Results are edge cached for 15 minutes.
 
 ### Request
@@ -198,13 +198,13 @@ Results are edge cached for 15 minutes.
 
 ## `/trades/:pair`
 
-Returns all swaps in the last 24 hours for the given KnightSwap pair.
+Returns all swaps in the last 24 hours for the given DarkKnight pair.
 Results are edge cached for 15 minutes.
 
 The pair address is the address of the two tokens in either order.
 The first address is considered the base in the response.
 
-Note because KnightSwap supports flash swaps and borrowing of both tokens in a pair, you may wish to exclude these
+Note because DarkKnight supports flash swaps and borrowing of both tokens in a pair, you may wish to exclude these
 trade types (types `"???"` and `"borrow-both"`).
 
 ### URL Parameters

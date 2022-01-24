@@ -9,10 +9,10 @@ DarkKnight DEX subgraph playground: https://graphapi.dark.knightswap.financial/s
 
 # DarkKnight Endpoints
 
-All DarkKnight pairs consist of two different tokens. BNB is not a native currency in DarkKnight, and is represented
-only by WBNB in the pairs.
+All DarkKnight pairs consist of two different tokens. FTM is not a native currency in DarkKnight, and is represented
+only by WFTM in the pairs.
 
-The canonical WBNB address used by the DarkKnight interface is `0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c`.
+The canonical WFTM address used by the DarkKnight interface is `0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c`.
 
 ## [`/summary`](https://api.dark.knightswap.financial/api/v2/summary)
 
@@ -73,9 +73,9 @@ Results are edge cached for 24 hours.
   data: {
     totalLiquidityUSD: '8978873.630992191924082507836841046',
     totalVolumeUSD: '168455544.4636947032547389604771717',
-    totalVolumeBNB: '390074.1061147667642290158462536124',
+    totalVolumeFTM: '390074.1061147667642290158462536124',
     untrackedVolumeUSD: '1192888416.538407463765017781932275',
-    totalLiquidityBNB: '32025.75027367803725084151221779494',
+    totalLiquidityFTM: '32025.75027367803725084151221779494',
     pairCount: 121,
     txCount: '407796',
   }
@@ -148,7 +148,7 @@ Results are edge cached for 1 minute.
 ```json5
 {
   '0x..._0x...': {
-    // the asset ids of BNB and BEP20 tokens, joined by an underscore
+    // the asset ids of FTM and BEP20 tokens, joined by an underscore
     base_name: '...', // token0 name
     base_symbol: '...', // token0 symbol
     base_id: '0x...', // token0 address
